@@ -2,12 +2,12 @@
 
 `momo-api` is an unofficial MoMo API written in Go. MoMo is currently #1 digital wallet and mobile payment service in Vietnam.
 
-The API was last updated at `Feb, 2023`. Since I discontinue the development, I now open-source this one, have fun :D
+The API was last updated at `Feb, 2023`. Since I've discontinued the development, I decided to open-source this one, have fun :D
 
 ## Disclaimer
 **`momo-api` is provided "as is" without warranties. You assume all risks for legal compliance and licensing. No support is offered for installation or troubleshooting.**
 
-_`momo-api` should only be used for educational purposes or personal projects._
+_`momo-api` should only be used for educational and personal projects._
 
 ## Usage
 ### Configuration
@@ -65,3 +65,5 @@ Require following environment varables:
 - All common MoMo endpoints are listed at `utils/constants.go`
 - MoMo uses SSL and some secure APIs may require additional encryption
 - To find out the app version, check out the info of an arbitrary request to the MoMo servers
+- To work on features, you have to check the network and look at the decompiled app code.
+- The MoMo app contains a core written in Java and several modules written in React Native. The React Native module uses Hermes VM instructions so it is much harder to analyze. Recommend tool is https://github.com/P1sec/hermes-dec
