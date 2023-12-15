@@ -2,7 +2,7 @@
 
 `momo-api` is an unofficial MoMo API written in Go. MoMo is currently #1 digital wallet and mobile payment service in Vietnam.
 
-The repo was last updated at `Feb, 2023`. This API has been discontinued.
+The API was last updated at `Feb, 2023`. Since I discontinue the development, I now open-source this one, have fun :D
 
 ## Disclaimer
 **`momo-api` is provided "as is" without warranties. You assume all risks for legal compliance and licensing. No support is offered for installation or troubleshooting.**
@@ -56,3 +56,12 @@ Require following environment varables:
 - `noti/trans.go` contains stuff to browse transactions
 - `noti#InitTransfer` to init the transaction (MoMo will pre-check available balance at this stage)
 - `noti#ConfirmTransfer` to confirm the transaction
+
+# Internal
+- If you want to extend the API or simply change the app version, you have to touch the internal code of MoMo. This can be done by downloading the apk of MoMo and use a Java decompiler.
+- To analyze the connection, install Charles to capture the packets (both in your phone & PC)
+  + Phone: connects to your PC's IP
+  + PC: acts as middleware to filter and analyze network activities
+- All common MoMo endpoints are listed at `utils/constants.go`
+- MoMo uses SSL and some secure APIs may require additional encryption
+- To find out the app version, check out the info of an arbitrary request to the MoMo servers
